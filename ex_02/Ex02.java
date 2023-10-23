@@ -1,13 +1,15 @@
 public class Ex02 {
-    public static void getAngryDog(int nbr) {
-        StringBuilder result = new StringBuilder();
+    public static String getAngryDog(int nbr) {
+        String result = "";
         for (int i = 0; i < nbr; i++) {
-            result.append("woof");
+            result += "woof";
         }
-        result.append("\n");
-        System.out.println(result);
+        result += "\n";
+
+        return result;
     }
+
     public static void main(String[] args) {
-        getAngryDog(3);
+        System.out.println(getAngryDog(3));
     }
 }

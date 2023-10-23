@@ -26,9 +26,9 @@ public class Ex06 {
             current = next.toString(); 
         }
     }
-
+/*
     public static void main(String[] args) {
-        int n = 6;
+        int n = -1;
         sequence(n);
-    }
+    }*/
 }
