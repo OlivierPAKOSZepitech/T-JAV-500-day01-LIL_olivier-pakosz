@@ -5,7 +5,7 @@ public class Ex02 {
             result.append("woof");
         }
         result.append("\n");
-    System.out.println(result);
+        System.out.println(result);
     }
     public static void main(String[] args) {
         getAngryDog(3);
