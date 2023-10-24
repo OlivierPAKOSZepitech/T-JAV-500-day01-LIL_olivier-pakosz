@@ -1,34 +1,27 @@
 public class Ex06 {
-    public static void sequence(int n) {
-        if (n < 0) {
-            return; 
+    public static void sequence(int nbr) {
+        if (nbr < 0) {
+            return;
         }
-
-        String current = "1"; 
-
-        for (int i = 0; i < n; i++) {
-            System.out.println(current);
-            StringBuilder next = new StringBuilder();
-            char digit = current.charAt(0);
+        System.out.println("1");
+        String s = "1";
+        for (int i = 0; i < nbr; i++) {
+            String tmp = "";
             int count = 1;
-
-            for (int j = 1; j < current.length(); j++) {
-                if (current.charAt(j) == digit) {
+            for (int j = 0; j < s.length(); j++) {
+                if (j < s.length() - 1 && s.charAt(j) == s.charAt(j + 1)) {
                     count++;
                 } else {
-                    next.append(count).append(digit);
-                    digit = current.charAt(j);
+                    tmp += count + "" + s.charAt(j);
                     count = 1;
                 }
             }
-
-            next.append(count).append(digit);
-            current = next.toString(); 
+            s = tmp;
+            System.out.println(s);
         }
     }
-/*
     public static void main(String[] args) {
-        int n = -1;
+        int n = 7;
         sequence(n);
-    }*/
+    }
 }
